@@ -58,7 +58,7 @@
 
     .btn_depositSelect_T:after {
         content: "";
-        background: url(./../Areas/Mobile/Content/Images/vi-vn/icon_arrow.svg) no-repeat center;
+        background: url(./../Content/Images/vi-vn/icon_arrow.svg) no-repeat center;
         background-size: 100% auto;
         position: absolute;
         right: 4%;

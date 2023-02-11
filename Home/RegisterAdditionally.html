@@ -275,8 +275,7 @@
                 response.forEach(element => {
                     i++;
                     document.querySelector("#bank" + i).addEventListener('click', (event) => {
-                        document.querySelector("#DataWriteArea > div.btn_depositSelect_T > div").innerHTML = '';
-                        html += `<div class="" style="width: 92%;margin: 0 auto;border: 1px solid transparent;box-sizing: border-box;display: flex;align-items: center;justify-content: space-between;    height: 100%;    padding: 0 40px 0 10px;">
+                        html = `<div class="" style="width: 92%;margin: 0 auto;border: 1px solid transparent;box-sizing: border-box;display: flex;align-items: center;justify-content: space-between;    height: 100%;    padding: 0 40px 0 10px;">
     <!-- ngIf: ctrl.model.CheckWithdrawalBankInfo --><!-- end ngIf: ctrl.model.CheckWithdrawalBankInfo -->
     <!-- ngIf: ctrl.model.CheckWithdrawalBankInfo --><img ng-if="ctrl.model.CheckWithdrawalBankInfo" ng-show="!ctrl.otherBankNameShowFirst" class="bankBtn ng-scope" ng-src="/Areas/Mobile/Content/Images/vi-vn/icon_bkcard_1028.jpg" src="./../Content/Images/vi-vn/icon_bkcard_`+ element.img + `.jpg"><!-- end ngIf: ctrl.model.CheckWithdrawalBankInfo -->
     <!-- ngIf: ctrl.model.CheckWithdrawalBankInfo --><div ng-if="ctrl.model.CheckWithdrawalBankInfo" class="withdraw_number ng-scope">Số đuôi：<span class="t_blue ng-binding" ng-bind="ctrl.model.CheckWithdrawalBankInfo.PayeeAccountNo">`+ element.lastnumber + `</span></div><!-- end ngIf: ctrl.model.CheckWithdrawalBankInfo -->
@@ -285,6 +284,7 @@
     <!-- ngIf: !ctrl.model.CheckWithdrawalBankInfo && ctrl.model.WithdrawalBankInfoList.length == 0 -->
     <!-- ngIf: (!ctrl.model.CheckWithdrawalBankInfo && ctrl.model.WithdrawalBankInfoList.length > 0) || !ctrl.model.WithdrawalBankInfoList -->
     </div>`;
+    document.querySelector("#DataWriteArea > div.btn_depositSelect_T > div").innerHTML = ``;
                         document.querySelector("#DataWriteArea > div.btn_depositSelect_T > div").innerHTML = html;
                         document.querySelector("#depositSelect_In").style.display = "none";
                         document.querySelector("#DataWriteArea > div.btn_depositSelect_T > div").classList.remove("on");
@@ -1514,14 +1514,14 @@
         }
     });
     // 
-    document.querySelector("body > div.swal2-container.swal2-center.swal2-shown > div > div.swal2-actions > button.swal2-confirm.swal2-styled").addEventListener('click', (event) => {
-        document.querySelector("body > div.swal2-container.swal2-center.swal2-shown").style.display = "none";
+    document.querySelector("body > div.swal2-container.swal2-center.swal2-shown1 > div > div.swal2-actions > button.swal2-confirm.swal2-styled").addEventListener('click', (event) => {
+        document.querySelector("body > div.swal2-container.swal2-center.swal2-shown1").style.display = "none";
     });
     function hideAl(){
         document.querySelector("body > div.swal2-container.swal2-center.swal2-shown1").style.display = "flex";
     }
     document.querySelector("#confinm").addEventListener('click', (event) => {
-        document.querySelector("body > div.swal2-container.swal2-center.swal2-shown").style.display = "flex";
+        document.querySelector("body > div.swal2-container.swal2-center.swal2-shown1").style.display = "flex";
     });
     var i = 0;
     function confirm(){
